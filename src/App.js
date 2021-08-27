@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import {useContext} from 'react'
+import { FooContext, BarContext, BazContext } from '.';
 
 function App() {
+  const foo = useContext(FooContext)
+  const bar = useContext(BarContext)
+  const baz = useContext(BazContext)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <p>
+      {foo} {bar} {baz}
+    </p>
   );
 }
 
